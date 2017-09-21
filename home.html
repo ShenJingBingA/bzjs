@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/echarts.js"></script>
+</head>
+<style>
+    html,body{
+        width: 100%;
+        height: 100%;
+        background: #f4f8fb;
+    }
+    .bigBox{
+        width: 98%;
+        height:400px;
+        margin: 10px auto;
+        border: 1px solid #dbdbdb;
+        background: #fff;
+        border-radius: 3px;
+    }
+    .bigBox:after{
+        content: '';
+        display: block;
+        width: 100%;
+        clear: both;
+    }
+    div.box{
+        width: 50%;
+        height:100%;
+        float: left;
+    }
+</style>
+<body>
+    <div class="bigBox">
+        <!--劳务分包安全教育-->
+        <div id="main1-1" class="box"></div>
+        <!--专业分包安全教育-->
+        <div id="main1-2" class="box"></div>
+    </div>
+    <div class="bigBox">
+        <!--劳务分包车辆总数-->
+        <div id="main1-3" class="box"></div>
+        <!--专业分包车辆总数-->
+        <div id="main1-4" class="box"></div>
+    </div>
+    <div class="bigBox">
+        <!--劳务分包技工-->
+        <div id="main1-5" class="box"></div>
+        <!--专业分包技工-->
+        <div id="main1-6" class="box"></div>
+    </div>
+    <div class="bigBox">
+        <!--劳务分包消防设备-->
+        <div id="main1-7" class="box"></div>
+        <!--专业分包消防设备-->
+        <div id="main1-8" class="box"></div>
+    </div>
+    <div class="bigBox">
+        <!--劳务分包工器具-->
+        <div id="main1-9" class="box"></div>
+        <!--专业分包工器具-->
+        <div id="main1-10" class="box"></div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+//    劳务分包安全教育
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main1-1'));
+    var colors=['#f5d732','#fab5de','#6ae1da'];
+var colorss=['#6ae1da','#00c2b0','#87daf9','#f4fc2e','#e8a6cc','#f077bd','#6ae1da','#f5d732','#fa884a','#8ac3f6','#a0f27c']
+    // 指定图表的配置项和数据
+    var option1 = {
+        color:colors,
+        title: {
+            text: '安全教育(劳务分包)',
+            x:'center'
+        },
+        tooltip: {},
+        legend: {
+            data:['安全教育计划数','培训次数','考试次数'],
+            top:30
+        },
+        grid: {
+            y2: 140
+        },
+        xAxis: {
+            data: ["浙江合力","浙江逸龙","湖南鸿源","四川丰达","湖南鸿昌","湖南湘中","吉泰递铺","吉泰梅溪","吉泰高禹","吉泰浦抗","吉泰孝丰"],
+            axisLabel:{
+                interval:0,//横轴信息全部显示
+                rotate:-30,//-30度角倾斜显示
+            }
+        },
+        yAxis: {},
+        series: [{
+            name: '安全教育计划数',
+            type: 'bar',
+            data: [5, 20, 36, 10, 10, 20,3,6,12,56,22]
+        },{
+            name: '培训次数',
+            type: 'bar',
+            data: [6, 3, 7, 2, 9, 20,5, 20, 36, 10,32]
+        },{
+            name: '考试次数',
+            type: 'bar',
+            data: [7, 12, 44, 2, 33, 20,32,11,22,8,9]
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option1);
+
+
+
+
+//    专业分包安全教育
+    var myChart = echarts.init(document.getElementById('main1-2'));
+    // 指定图表的配置项和数据
+    var option2 = {
+        color:colors,
+        title: {
+            text: '安全教育(专业分包)',
+            x:'center'
+        },
+        tooltip: {},
+        legend: {
+            data:['安全教育计划数','培训次数','考试次数'],
+            top:30
+        },
+        grid: {
+            y2: 140
+        },
+        xAxis: {
+            data: ["乔兴土建一班","乔兴土建二班","乔兴土建三班","乔兴土建四班顶管","四川输变电","虎牌电务","台州方园","吉泰土建一班","吉泰土建二班","安吉市政(顶管)"],
+            axisLabel:{
+                interval:0,//横轴信息全部显示
+                rotate:-30,//-30度角倾斜显示
+            }
+        },
+        yAxis: {},
+        series: [{
+            name: '安全教育计划数',
+            type: 'bar',
+            data: [5, 20, 36, 10, 10, 20,3,6,12,56]
+        },{
+            name: '培训次数',
+            type: 'bar',
+            data: [6, 3, 7, 2, 9, 20,5, 20, 36, 10]
+        },{
+            name: '考试次数',
+            type: 'bar',
+            data: [7, 12, 44, 2, 33, 20,32,11,22,8]
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option2);
+
+//劳务分包车辆管理
+    var myChart = echarts.init(document.getElementById('main1-3'));
+    var option3= {
+        color:colorss,
+        title : {
+            text: '车辆统计(劳务分包)',
+            x:'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ["浙江合力","浙江逸龙","湖南鸿源","四川丰达","湖南鸿昌","湖南湘中","吉泰递铺","吉泰梅溪","吉泰高禹","吉泰浦抗","吉泰孝丰"]
+        },
+        series : [
+            {
+                name: '车辆总数',
+                type: 'pie',
+                radius : '55%',
+                center: ['50%', '60%'],
+                data:[
+                    {value:335, name:'浙江合力'},
+                    {value:310, name:'浙江逸龙'},
+                    {value:234, name:'湖南鸿源'},
+                    {value:135, name:'四川丰达'},
+                    {value:222, name:'湖南鸿昌'},
+                    {value:34, name:'湖南湘中'},
+                    {value:200, name:'吉泰递铺'},
+                    {value:100, name:'吉泰梅溪'},
+                    {value:88, name:'吉泰高禹'},
+                    {value:99, name:'吉泰浦抗'},
+                    {value:22, name:'吉泰孝丰'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(option3);
+
+
+//专业分包车辆管理
+    var myChart = echarts.init(document.getElementById('main1-4'));
+
+    var option4= {
+        color:colorss,
+        title : {
+            text: '车辆统计(劳务分包)',
+            x:'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ["乔兴土建一班","乔兴土建二班","乔兴土建三班","乔兴土建四班顶管","四川输变电","虎牌电务","台州方园","吉泰土建一班","吉泰土建二班","安吉市政(顶管)"]
+        },
+        series : [
+            {
+                name: '车辆总数',
+                type: 'pie',
+                radius : '55%',
+                center: ['50%', '60%'],
+                data:[
+                    {value:335, name:'乔兴土建一班'},
+                    {value:310, name:'乔兴土建二班'},
+                    {value:234, name:'乔兴土建三班'},
+                    {value:135, name:'乔兴土建四班顶管'},
+                    {value:222, name:'四川输变电'},
+                    {value:34, name:'虎牌电务'},
+                    {value:200, name:'台州方园'},
+                    {value:100, name:'吉泰土建一班'},
+                    {value:88, name:'吉泰土建二班'},
+                    {value:99, name:'安吉市政(顶管)'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(option4);
+
+
+
+    //    劳务分包技工
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main1-5'));
+    // 指定图表的配置项和数据
+    var option5 = {
+        color:colors,
+        title: {
+            text: '技工人数(劳务分包)',
+            x:'center'
+        },
+        tooltip: {},
+        legend: {
+            data:['总人数','技工人数','辅工人数'],
+            top:30
+        },
+        grid: {
+            y2: 140
+        },
+        xAxis: {
+            data: ["浙江合力","浙江逸龙","湖南鸿源","四川丰达","湖南鸿昌","湖南湘中","吉泰递铺","吉泰梅溪","吉泰高禹","吉泰浦抗","吉泰孝丰"],
+            axisLabel:{
+                interval:0,//横轴信息全部显示
+                rotate:-30,//-30度角倾斜显示
+            }
+        },
+        yAxis: {},
+        series: [{
+            name: '总人数',
+            type: 'bar',
+            data: [5, 20, 36, 10, 10, 20,3,6,12,56,22]
+        },{
+            name: '技工人数',
+            type: 'bar',
+            data: [6, 3, 7, 2, 9, 20,5, 20, 36, 10,32]
+        },{
+            name: '辅工人数',
+            type: 'bar',
+            data: [7, 12, 44, 2, 33, 20,32,11,22,8,9]
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option5);
+
+
+    //    专业分包技工
+    var myChart = echarts.init(document.getElementById('main1-6'));
+    // 指定图表的配置项和数据
+    var option6 = {
+        color:colors,
+        title: {
+            text: '技工人数(专业分包)',
+            x:'center'
+        },
+        tooltip: {},
+        legend: {
+            data:['总人数','技工人数','辅工人数'],
+            top:30
+        },
+        grid: {
+            y2: 140
+        },
+        xAxis: {
+            data: ["乔兴土建一班","乔兴土建二班","乔兴土建三班","乔兴土建四班顶管","四川输变电","虎牌电务","台州方园","吉泰土建一班","吉泰土建二班","安吉市政(顶管)"],
+            axisLabel:{
+                interval:0,//横轴信息全部显示
+                rotate:-30,//-30度角倾斜显示
+            }
+        },
+        yAxis: {},
+        series: [{
+            name: '总人数',
+            type: 'bar',
+            data: [5, 20, 36, 10, 10, 20,3,6,12,56]
+        },{
+            name: '技工人数',
+            type: 'bar',
+            data: [6, 3, 7, 2, 9, 20,5, 20, 36, 10]
+        },{
+            name: '辅工人数',
+            type: 'bar',
+            data: [7, 12, 44, 2, 33, 20,32,11,22,8]
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option6);
+
+//劳务分包消防设备
+var myChart = echarts.init(document.getElementById('main1-7'));
+var option7= {
+    color:colorss,
+    title : {
+        text: '消防设备统计(劳务分包)',
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data: ["浙江合力","浙江逸龙","湖南鸿源","四川丰达","湖南鸿昌","湖南湘中","吉泰递铺","吉泰梅溪","吉泰高禹","吉泰浦抗","吉泰孝丰"]
+    },
+    series : [
+        {
+            name: '消防设备总数',
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '60%'],
+            data:[
+                {value:335, name:'浙江合力'},
+                {value:310, name:'浙江逸龙'},
+                {value:234, name:'湖南鸿源'},
+                {value:135, name:'四川丰达'},
+                {value:222, name:'湖南鸿昌'},
+                {value:34, name:'湖南湘中'},
+                {value:200, name:'吉泰递铺'},
+                {value:100, name:'吉泰梅溪'},
+                {value:88, name:'吉泰高禹'},
+                {value:99, name:'吉泰浦抗'},
+                {value:22, name:'吉泰孝丰'}
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChart.setOption(option7);
+
+
+//专业分包消防设备
+var myChart = echarts.init(document.getElementById('main1-8'));
+var option8= {
+    color:colorss,
+    title : {
+        text: '消防设备统计(劳务分包)',
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data: ["乔兴土建一班","乔兴土建二班","乔兴土建三班","乔兴土建四班顶管","四川输变电","虎牌电务","台州方园","吉泰土建一班","吉泰土建二班","安吉市政(顶管)"]
+    },
+    series : [
+        {
+            name: '消防设备总数',
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '60%'],
+            data:[
+                {value:335, name:'乔兴土建一班'},
+                {value:310, name:'乔兴土建二班'},
+                {value:234, name:'乔兴土建三班'},
+                {value:135, name:'乔兴土建四班顶管'},
+                {value:222, name:'四川输变电'},
+                {value:34, name:'虎牌电务'},
+                {value:200, name:'台州方园'},
+                {value:100, name:'吉泰土建一班'},
+                {value:88, name:'吉泰土建二班'},
+                {value:99, name:'安吉市政(顶管)'}
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChart.setOption(option8);
+
+
+//    劳务分包工器具
+// 基于准备好的dom，初始化echarts实例
+var myChart = echarts.init(document.getElementById('main1-9'));
+// 指定图表的配置项和数据
+var col=['#f5d732','#6ae1da']
+var option9 = {
+    color:col,
+    title: {
+        text: '工器具统计(劳务分包)',
+        x:'center'
+    },
+    tooltip: {},
+    legend: {
+        data:['工器具类别总数','总数'],
+        top:30
+    },
+    grid: {
+        y2: 140
+    },
+    xAxis: {
+        data: ["浙江合力","浙江逸龙","湖南鸿源","四川丰达","湖南鸿昌","湖南湘中","吉泰递铺","吉泰梅溪","吉泰高禹","吉泰浦抗","吉泰孝丰"],
+        axisLabel:{
+            interval:0,//横轴信息全部显示
+            rotate:-30,//-30度角倾斜显示
+        }
+    },
+    yAxis: {},
+    series: [{
+        name: '工器具类别总数',
+        type: 'bar',
+        data: [5, 20, 36, 10, 10, 20,3,6,12,56,22]
+    },{
+        name: '总数',
+        type: 'bar',
+        data: [6, 3, 7, 2, 9, 20,5, 20, 36, 10,32]
+    }]
+};
+
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option9);
+
+
+//    专业分包工器具统计
+var myChart = echarts.init(document.getElementById('main1-10'));
+// 指定图表的配置项和数据
+
+var option10 = {
+    color:col,
+    title: {
+        text: '工器具统计(专业分包)',
+        x:'center'
+    },
+    tooltip: {},
+    legend: {
+        data:['工器具类别总数','总数'],
+        top:30
+    },
+    grid: {
+        y2: 140
+    },
+    xAxis: {
+        data: ["乔兴土建一班","乔兴土建二班","乔兴土建三班","乔兴土建四班顶管","四川输变电","虎牌电务","台州方园","吉泰土建一班","吉泰土建二班","安吉市政(顶管)"],
+        axisLabel:{
+            interval:0,//横轴信息全部显示
+            rotate:-30,//-30度角倾斜显示
+        }
+    },
+    yAxis: {},
+    series: [{
+        name: '工器具类别总数',
+        type: 'bar',
+        data: [5, 20, 36, 10, 10, 20,3,6,12,56]
+    },{
+        name: '总数',
+        type: 'bar',
+        data: [6, 3, 7, 2, 9, 20,5, 20, 36, 10]
+    }]
+};
+
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option10);
+</script>

@@ -1,0 +1,76 @@
+body,html{
+    width: 100%;
+    height: 100%;
+}
+/*班组建设*/
+.class-con{
+    width: 100%;
+    height: 100%;
+}
+/*头 列表*/
+.class-list{
+    width: 100%;
+    /*height: 100px;*/
+    overflow: hidden;
+    padding: 12px 8px;
+    border-bottom: 1px solid #ececec;
+}
+.class-list a{
+    display: block;
+    height: 32px;
+    padding: 0 7px;
+    line-height: 32px;
+    text-align: center;
+    float: left;
+    font-size:15px;
+    color: #212121;
+    margin-bottom: 4px;
+    border: 1px solid #fff;
+    text-decoration: none;
+}
+.class-list a:hover{
+    text-decoration: none;
+    color: #212121;
+}
+/*头 列表选中效果*/
+.class-list .class-list-active{
+    border: 1px solid #1fb5ac;
+    color: #1fb5ac;
+}
+/*中间 列表*/
+.class-bottom{
+    width: 100%;
+    padding:10px 20px;
+    background: #f4f8fb;
+}
+.class-bottom-con{
+    width: 100%;
+}
+.class-bottom-con ul.class-mid-list{
+    width: 100%;
+    height: 36px;
+    overflow: hidden;
+    border-bottom: 2px solid #1fb5ac;
+}
+.class-bottom-con ul.class-mid-list li{
+    height: 100%;
+    padding: 0 26px;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+.class-bottom-con ul.class-mid-list li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #212121;
+    text-decoration: none;
+}
+.class-bottom-con ul.class-mid-list li.class-bottom-active div{
+    width: 100%;
+    height: 3px;
+    background: #1fb5ac;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

@@ -1,0 +1,312 @@
+body,html{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/*头部*/
+header{
+    width: 100%;
+    height:76px;
+    background: #1fb5ac;
+    float: left;
+    /*overflow: hidden;*/
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    /*flex-wrap: nowrap;*/
+}
+header:after{
+    display: block;
+    content: "";
+    clear: both;
+    width: 100%;
+    height: 0;
+}
+header img{
+    height: 100%;
+    float: left;
+}
+header .nav{
+    float: left;
+    height: 100%;
+    margin-left: 10px;
+    padding-top: 21px;
+}
+header .nav li{
+    text-align: center;
+    float: left;
+    width: 106px;
+    height: 34px;
+    line-height: 34px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+}
+header .nav li a{
+    color: #fff;
+}
+header .nav li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.first{
+    background: #3e9f99;
+    border-radius: 4px;
+}
+/*欢迎登录*/
+header .welcome{
+    width: 240px;
+    padding-left: 16px;
+    height: 100%;
+    float: right;
+    padding-top: 22px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 40px;
+}
+header .welcome:hover{
+    background: #55c7c0;
+}
+.wel-img-box{
+    width:34px;
+    height: 34px;
+    border-radius: 50%;
+    float: left;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.wel-img-box img{
+    width: 100%;
+}
+.welcome p{
+    float: left;
+    font-size:13px;
+    color: #fff;
+    line-height: 38px;
+}
+.welcome:hover .wel-down{
+    display: block;
+}
+/*下拉信息*/
+.wel-down{
+    width: 100%;
+    position: absolute;
+    top:76px;
+    left: 0;
+    z-index: 888;
+    border: 1px solid #ddd;
+    display: none;
+}
+.wel-down a{
+    display: block;
+    width: 100%;
+    height: 30px;
+    background: #fff;
+    font-size: 15px;
+    line-height: 30px;
+    padding-left: 22px;
+    color: #333333;
+}
+.wel-down a span{
+    font-size: 16px;
+    color: #333333;
+    margin-right: 20px;
+}
+
+.wel-down a:hover{
+    background: #fbfbfb;
+    color: #55c7c0;
+}
+.wel-down a:hover span{
+    color: #55c7c0;
+}
+
+
+/*身体*/
+.body-box{
+    width: 100%;
+    height: 89%;
+    overflow: hidden;
+    float: left;
+}
+.body-box:after{
+    display: block;
+    content: "";
+    clear: both;
+    width: 100%;
+    height: 0;
+}
+/*左部导航*/
+.body-left{
+    width: 13%;
+    height: 100%;
+    background: #313541;
+    float: left;
+    display: none;
+}
+.body-left > li{
+    display: none;
+    cursor: pointer;
+}
+
+.body-left > li.active{
+    display: block;
+}
+.type>div>div{
+    display: none;
+}
+.click{
+    display: block;
+    width: 100%;
+    height: 68px;
+    line-height: 68px;
+    text-align: center;
+}
+/*小三角*/
+.triangle{
+    width: 0;
+    border: 6px solid rgba(0,0,0,0);
+    border-left:6px solid #555e6b;
+    display: inline-block;
+}
+.click span{
+    color:#555e6b ;
+    font-size: 18px;
+}
+/*下拉*/
+.down a{
+    display: block;
+    width: 100%;
+    height:34px;
+    line-height:34px;
+    padding-left: 50px;
+    font-size: 15px;
+    background: #343946;
+    color: #999BA1;
+    border-left: 2px solid #343946;
+}
+.type>a{
+    display: block;
+    width: 100%;
+    height: 68px;
+    line-height: 68px;
+    padding-left: 50px;
+    color:#555e6b;
+    font-size: 18px;
+    border-left: 2px solid #343946;
+}
+/*点击效果*/
+.click-active{
+    background: #2c2f36;
+}
+.click-active .triangle{
+    /*transition:transform 0.5s linear;*/
+    transform: rotateZ(90deg);
+    border-left:8px solid #1fb5ac;
+    margin-bottom: -3px;
+}
+.click-active span{
+    color: #1FB5AC;
+}
+
+.down-active{
+    background:#313541!important;
+    color: #fff!important;
+    border-left: 3px solid #1fb5ac!important;
+}
+.other-active{
+    background: #2c2f36;
+    color: #fff!important;
+}
+
+/*右部*/
+.body-right{
+    width: 100%;
+    height: 100%;
+    float: left;
+    /*overflow: hidden;*/
+}
+.body-right:after{
+    display: block;
+    content: "";
+    clear: both;
+    width: 100%;
+    height: 0;
+}
+/*路径面包屑*/
+.path-view{
+    width: 100%;
+    height:56px;
+    line-height: 56px;
+    padding-left:20px;
+    font-size: 16px;
+    border-bottom: 1px solid #ececec;
+    display: none;
+}
+.path-view span{
+    color: #1fb5ac;
+}
+
+/*退出登录 弹框*/
+.logout{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+#logout{
+    width: 350px;
+    height: 188px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    box-shadow: 0 0 3px 1px #ccc;
+}
+#logout .ltitle{
+    width: 100%;
+    height: 46px;
+    background: #f0f0f0;
+    padding-left: 18px;
+    line-height: 46px;
+    font-size: 16px;
+    color: #333333;
+}
+#logout .lcon{
+    width: 100%;
+    height: 96px;
+    overflow: hidden;
+}
+#logout .lcon img{
+    width: 62px;
+    margin-top: 17px;
+    float: left;
+    margin-left: 54px;
+    margin-right: 20px;
+}
+#logout .lcon p{
+    float: left;
+    margin-top: 32px;
+    font-size:20px;
+    color: #333333;
+}
+.lbtn{
+    width: 60px;
+    height: 30px;
+    border-radius: 2px;
+    background:#eb6120 ;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    right: 36px;
+    bottom: 16px;
+    cursor: pointer;
+}

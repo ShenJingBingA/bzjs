@@ -1,0 +1,88 @@
+body{
+    background:#f4f8fb;
+}
+.treeL{
+    width: 162px;
+    height: 538px;
+    background: #ffffff;
+    margin:10px 8px 38px 12px;
+    float: left;
+}
+.treeR{
+    width: 986px;
+    height: 538px;
+    background: #ffffff;
+    margin:10px 0 38px 0;
+    float: left;
+    padding-top:22px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+/*表格*/
+.treeR table{
+    width: 100%;
+    border: 1px solid #ececec;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+.treeR table tr{
+    width: 100%;
+    border-bottom: 1px solid #ececec;
+}
+.treeR table td{
+    width: 50%;
+    height: 56px;
+    text-align: center;
+    font-size:16px;
+    color:#5e5e5e;
+    border-right: 1px solid #ececec;
+}
+.treeR table td input{
+    width: 456px;
+    height: 40px;
+    background: #f4f8fb;
+    padding-left: 8px;
+    outline: none;
+    text-align: center;
+    font-size:16px;
+    color:#5e5e5e;
+}
+.treeR table td select{
+    width: 456px;
+    height: 40px;
+    background:#f4f8fb;
+    text-align: center;
+        padding: 0 0 0 45%;
+}
+
+
+.treeR table td select option{
+    text-align: center;
+}
+.treeR table td input.input-active{
+    box-shadow: 0 0 3px 1px #cfcfcf;
+}
+.buttonBox{
+    width: 100%;
+    text-align: center;
+}
+.buttonBox button{
+    width: 66px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-right: 20px;
+}
+.addBtn{
+    background:#4fc281;
+}
+.updataBtn{
+    background: #4b98dc;
+}
+.delBtn{
+    background:#f33f47;
+}

@@ -1,0 +1,10 @@
+.query-check{
+    width: 100%;
+    height: 60px;
+    background: #f4f8fb;
+    padding-top: 15px;
+    padding-left: 24px;
+}
+.query-out{
+    margin-right: 16px;
+}
